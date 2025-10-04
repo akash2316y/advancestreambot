@@ -28,13 +28,13 @@ class Var(object):
     else:
         ON_HEROKU = False
 
-    FQDN = str(getenv('FQDN', '152.53.155.85:8282')) if not ON_HEROKU or getenv('FQDN') else APP_NAME + '.herokuapp.com'
+    FQDN = str(getenv('FQDN', '152.53.155.85:8080')) if not ON_HEROKU or getenv('FQDN') else APP_NAME + '.herokuapp.com'
     HAS_SSL = bool(getenv('HAS_SSL', False))
 
     if HAS_SSL:
-        URL = "http://152.53.155.85:8282/".format(FQDN)
+        URL = "http://152.53.155.85:8080/".format(FQDN)
     else:
-        URL = "http://152.53.155.85:8282/".format(FQDN)
+        URL = "http://152.53.155.85:8080/".format(FQDN)
 
     DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://akashrabha2005:781120@cluster0.pv6yd2f.mongodb.net/'))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'marvelbackupp'))
