@@ -32,11 +32,11 @@ class Var(object):
     HAS_SSL = bool(getenv('HAS_SSL', False))
 
     if HAS_SSL:
-        URL = "http://152.53.155.85:8282".format(FQDN)
+        URL = "http://152.53.155.85:8282/".format(FQDN)
     else:
-        URL = "http://152.53.155.85:8282".format(FQDN)
+        URL = "http://152.53.155.85:8282/".format(FQDN)
 
-    DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://Marvelbotz:Marvelbotz@cluster0.oyxdumi.mongodb.net/?retryWrites=true&w=majority'))
+    DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://akashrabha2005:781120@cluster0.pv6yd2f.mongodb.net/'))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'marvelbackupp'))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split())) 
     SHORTLINK_URL = getenv('SHORTLINK_URL', 'linkcents.com')
